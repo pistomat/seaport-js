@@ -23,6 +23,17 @@ import {
   getSummedTokenAndIdentifierAmounts,
   getMaximumSizeForOrder,
 } from "./utils/item";
+import {
+  feeToConsiderationItem,
+  deductFees,
+  mapInputItemToOfferItem,
+  areAllCurrenciesSame,
+  totalItemsAmount,
+  mapOrderAmountsFromFilledStatus,
+  mapOrderAmountsFromUnitsToFill,
+  generateRandomSalt,
+  shouldUseMatchForFulfill,
+} from "./utils/order";
 
 export { Seaport };
 export type {
@@ -48,4 +59,15 @@ export {
   getPresentItemAmount,
   getSummedTokenAndIdentifierAmounts,
   getMaximumSizeForOrder,
+};
+export {
+  feeToConsiderationItem,
+  deductFees,
+  mapInputItemToOfferItem,
+  areAllCurrenciesSame,
+  totalItemsAmount,
+  mapOrderAmountsFromFilledStatus,
+  mapOrderAmountsFromUnitsToFill,
+  generateRandomSalt,
+  shouldUseMatchForFulfill,
 };
