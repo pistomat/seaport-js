@@ -230,13 +230,21 @@ export const validateOfferBalancesAndApprovals = ({
 
   if (throwOnInsufficientBalances && insufficientBalances.length > 0) {
     throw new Error(
-      `The offerer does not have the sufficient balances: ${insufficientBalances}`
+      `The offerer does not have the sufficient balances: ${JSON.stringify(
+        insufficientBalances,
+        null,
+        2
+      )}`
     );
   }
 
   if (throwOnInsufficientApprovals && insufficientApprovals.length > 0) {
     throw new Error(
-      `The offerer does not have the sufficient approvals: ${insufficientApprovals}`
+      `The offerer does not have the sufficient approvals: ${JSON.stringify(
+        insufficientApprovals,
+        null,
+        2
+      )}`
     );
   }
 
