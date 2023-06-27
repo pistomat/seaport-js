@@ -2,7 +2,7 @@ import type { DomainRegistry as TypeChainDomainRegistryContract } from "./typech
 import type {
   OrderStruct,
   Seaport as TypeChainSeaportContract,
-} from "./typechain-types/seaport_v1_4/contracts/Seaport";
+} from "./typechain-types/Seaport";
 import {
   BigNumber,
   BigNumberish,
