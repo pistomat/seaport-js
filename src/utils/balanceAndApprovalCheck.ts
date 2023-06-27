@@ -230,12 +230,14 @@ export const validateOfferBalancesAndApprovals = ({
 
   if (throwOnInsufficientBalances && insufficientBalances.length > 0) {
     throw new Error(
-      "The offerer does not have the amount needed to create or fulfill."
+      `The offerer does not have the sufficient balances: ${insufficientBalances}`
     );
   }
 
   if (throwOnInsufficientApprovals && insufficientApprovals.length > 0) {
-    throw new Error("The offerer does not have the sufficient approvals.");
+    throw new Error(
+      `The offerer does not have the sufficient approvals: ${insufficientApprovals}`
+    );
   }
 
   return insufficientApprovals;
